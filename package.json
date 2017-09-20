@@ -1,0 +1,32 @@
+{
+  "name": "page-ogtags",
+  "version": "0.0.1",
+  "description": "Get OG tags with ease",
+  "main": "dist/index.js",
+  "scripts": {
+    "node": "flow-node ./src/index.js",
+    "test": "jest",
+    "babel-jest": "babel-jest",
+    "remove_annotations": "flow-remove-types ./src --out-dir ./dist",
+    "release": "flow && test && yarn remove_annotations"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzarcon/page-ogtags.git"
+  },
+  "author": "zzarcon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zzarcon/page-ogtags/issues"
+  },
+  "homepage": "https://github.com/zzarcon/page-ogtags#readme",
+  "devDependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "flow-bin": "^0.54.1",
+    "flow-remove-types": "^1.2.1",
+    "jest": "^21.1.0"
+  },
+  "dependencies": {
+    "puppeteer": "^0.10.2"
+  }
+}
